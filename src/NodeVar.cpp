@@ -1,6 +1,9 @@
 #include "NodeVar.h"
 #include "Node.h"
 
+#include <typeinfo>
+
+
 List::List()
 {
     head = nullptr;
@@ -28,9 +31,18 @@ Node* List::give_me_node(int index)
     return temp;
 }
 
+  string List::give_me_type(Node* leaf)
+  {
+      string s = typeid(leaf).name();
+
+      return s;
+  }
+
 void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez rozroznienia
 {
-   Node* newNode = new Node; // tego nie moze
+    string s = (give_me_type(prev_node));
+
+   (give_me_type(prev_node))* newNode = new (give_me_type(prev_node)); // tego nie moze
 
    newNode->data = new_data;
 
@@ -438,7 +450,7 @@ int List::size_()
 return (size_+1);
 }
 
-*/
+
 void List::display()
 {
     if (head == nullptr)

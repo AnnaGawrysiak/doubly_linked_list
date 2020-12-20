@@ -24,6 +24,8 @@ public:
 
      Node* give_me_node(int index);
 
+     string give_me_type(Node* leaf);
+
     List();
 
     ~List();
