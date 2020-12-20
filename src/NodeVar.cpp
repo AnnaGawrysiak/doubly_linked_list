@@ -28,9 +28,9 @@ Node* List::give_me_node(int index)
     return temp;
 }
 
-void List::insert_after(Node* prev_node, int new_data)
+void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez rozroznienia
 {
-   Node* newNode = new Node;
+   Node* newNode = new Node; // tego nie moze
 
    newNode->data = new_data;
 
@@ -105,10 +105,9 @@ int List::operator [](int index)
     return temp->data;
 }
 
-void List::push_beginning(int new_data)
+void List::push_beginning(int new_data, Node* newNode)
 {
-   Node* newNode = new Node;
-
+   //Node* newNode = new Node; // klasa abstrakcyjna, wiec nie mozemy utworzyc. za to moze do niego przyjsc czarny lub czerwony
    newNode->data = new_data;
    newNode->prev = nullptr;
    newNode->next = head;
@@ -439,7 +438,7 @@ int List::size_()
 return (size_+1);
 }
 
-
+*/
 void List::display()
 {
     if (head == nullptr)
@@ -462,4 +461,24 @@ void List::display()
       else
           return;
     };
+
 }
+
+
+void List::add_node(Node* newNode, int value)
+{
+
+   newNode->data = value;
+   newNode->prev = nullptr;
+   newNode->next = head;
+
+   if(head != nullptr) //
+   head->prev = newNode;
+
+   else tail = newNode;
+
+   head = newNode;
+
+   count++;
+}
+

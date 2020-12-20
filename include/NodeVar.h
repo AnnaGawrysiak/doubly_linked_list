@@ -13,7 +13,6 @@ private:
 
       unsigned count;
 
-    Node* give_me_node(int index);
 
     void insert_after(Node* prev_node, int new_data);
 
@@ -23,6 +22,8 @@ private:
 
 public:
 
+     Node* give_me_node(int index);
+
     List();
 
     ~List();
@@ -31,7 +32,7 @@ public:
 
     void push_beginning(int new_data);
 
-    void push_end (int new_data);
+    void push_end (int new_data, Node* newNode);
 
     void remove_from_position(int position);
 
@@ -56,4 +57,6 @@ public:
     int size_();
 
     void display();
+
+    void add_node(Node* newNode, int value);
 };

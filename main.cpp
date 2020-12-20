@@ -1,5 +1,7 @@
 #include <iostream>
 #include "NodeVar.h"
+#include "Red_Node.h"
+#include "Black_Node.h"
 
 using namespace std;
 
@@ -33,7 +35,7 @@ bool test_remove_from_position();
 
 int main()
 {
-
+/*
    List myNodeVar;
 
    myNodeVar.push_beginning(20);
@@ -99,10 +101,31 @@ int main()
     cout << "test_remove_from_position: " << (test_remove_from_position() ? " Success! " : " Failure") << endl;
 
     myNodeVar.display();
+*/ // zrobilysmy klase abstrakcyjna z node. nie moze miec wywolan
+
+    List tree;
+
+    Red_Node red_branch;
+
+    tree.add_node(&red_branch, 4);
+
+    tree.give_me_node(0)->testowa();
+
+    Black_Node black_branch;
+
+    tree.add_node(&black_branch, 5);
+
+    tree.give_me_node(0)->testowa();
+
+    tree.display();
+
+    //Black_Node red_branch;
+
+    //tree.push_beginning(red_branch);
 
     return 0;
 }
-
+/*
 int operator +(const Node &lhs, const Node &rhs)
 {
     return (lhs.data + rhs.data);
@@ -324,4 +347,4 @@ bool test_remove_from_position()
     return false;
 }
 
-
+*/

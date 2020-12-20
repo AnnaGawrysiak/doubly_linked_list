@@ -14,6 +14,7 @@ class Node // element listy dwukierunkowej
         Node (const Node& a);
         virtual ~Node();
         Node& operator=(const Node& r);
+        virtual void testowa() = 0; // metoda czysto wirtualna
 
     //private:
 };
