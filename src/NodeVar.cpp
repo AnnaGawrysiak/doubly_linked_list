@@ -3,8 +3,6 @@
 #include "Black_Node.h"
 #include "Red_Node.h"
 
-#include <typeinfo>
-
 
 List::List()
 {
@@ -33,26 +31,10 @@ Node* List::give_me_node(int index)
     return temp;
 }
 
-
-void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez rozroznienia
+/*
+void List::insert_after(Node* prev_node, int new_data)
 {
-    //Node* newNode = new Node;
-    //decltype(prev_node) newNode;
-
-    decltype(prev_node) newNode={nullptr};
-
-    cout << " typ argumentu przekazwanego do metody insert_after: " << typeid(newNode).name() << endl;
-
-    //auto* newNode = new auto(prev_node);
-
-
-    // (give_me_type(prev_node))* newNode = new (give_me_type(prev_node)); // tego nie moze
-
-   //if(typeid(prev_node)==typeid(Black_Node))
-    //   Node* newNode = new Black_Node;
-
-   // else
-     //  Red_Node* newNode = new Red_Node;
+  decltype(prev_node) newNode={nullptr};
 
    newNode->data = new_data;
 
@@ -68,14 +50,11 @@ void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez roz
 
     count++;
 }
-
+*/
+/*
 void List::insert_before(Node* next_node, int new_data)
 {
-    //decltype(next_node) newNode;
-
      decltype(next_node) newNode={nullptr};
-
-   //Node* newNode = new Node;
 
    newNode->data = new_data;
 
@@ -92,7 +71,7 @@ void List::insert_before(Node* next_node, int new_data)
 
    count++;
 }
-
+*/
 void List::n_remove (Node* Node_to_remove)
 {
     count--;
@@ -130,20 +109,16 @@ int List::operator [](int index)
 
     return temp->data;
 }
-
+/*
 void List::push_beginning(int new_data, Node* newNode_)
 {
-   //Node* newNode = new Node; // klasa abstrakcyjna, wiec nie mozemy utworzyc. za to moze do niego przyjsc czarny lub czerwony
-
-    //decltype(newNode_) newNode;
-
      decltype(newNode_) newNode={nullptr};
 
    newNode->data = new_data;
    newNode->prev = nullptr;
    newNode->next = head;
 
-   if(head != nullptr) //
+   if(head != nullptr)
    head->prev = newNode;
 
    else tail = newNode;
@@ -153,14 +128,10 @@ void List::push_beginning(int new_data, Node* newNode_)
    count++;
 
 }
-
+*/
 void List::push_end(int new_data, Node* newNode_)
 {
-
-    decltype(newNode_) newNode={nullptr};
-
-  // decltype(newNode_) newNode;
-   //Node* newNode = new Node;
+    decltype(newNode_) newNode = {nullptr, nullptr};
 
    newNode->data = new_data;
    newNode->prev = tail;
@@ -219,7 +190,7 @@ void List::n_pop_back()
 
     else if (head->next == nullptr)
     {
-        Node* delNode = tail; // Save address of node to delete in a pointer
+        Node* delNode = tail;
         tail = tail->prev;
         head = nullptr;
         delete delNode;
@@ -230,7 +201,7 @@ void List::n_pop_back()
 
     else
     {
-        Node* delNode = tail; // Save address of node to delete in a pointer
+        Node* delNode = tail;
         tail = tail->prev;
         tail->next = nullptr;
         delete delNode;
@@ -325,7 +296,7 @@ int List::find_min()
     return found_min;
 
 }
-
+/*
 void List::insert_at(int position, int value)
 {
     if (position > size_())
@@ -335,37 +306,10 @@ void List::insert_at(int position, int value)
        return;
     };
 
-    //void List::insert_before(Node* next_node, int new_data)
-
      insert_before(give_me_node(position+1), value);
 
-
-   /* Node* newNode = new Node;
-
-    newNode->data = value;
-
-    Node* temp = head;
-
-    for (int i = 0; i < position; i++)
-    {
-        temp = temp->next;
-    }
-
-    if (temp->prev != nullptr)
-    {
-       newNode->prev = temp->prev;
-       newNode->prev->next = newNode;
-    }
-    else head = newNode;
-
-   temp->prev = newNode;
-
-   newNode->next = temp;
-
-   count++;
-*/
 }
-
+*/
 void List::swap_value(int index1, int index2)
 {
     int temp = 0;
@@ -512,7 +456,7 @@ void List::add_node(Node* newNode, int value)
    newNode->prev = nullptr;
    newNode->next = head;
 
-   if(head != nullptr) //
+   if(head != nullptr)
    head->prev = newNode;
 
    else tail = newNode;
