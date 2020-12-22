@@ -37,7 +37,9 @@ Node* List::give_me_node(int index)
 void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez rozroznienia
 {
     //Node* newNode = new Node;
-    decltype(prev_node) newNode;
+    //decltype(prev_node) newNode;
+
+    decltype(prev_node) newNode={nullptr};
 
     cout << " typ argumentu przekazwanego do metody insert_after: " << typeid(newNode).name() << endl;
 
@@ -69,7 +71,9 @@ void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez roz
 
 void List::insert_before(Node* next_node, int new_data)
 {
-    decltype(next_node) newNode;
+    //decltype(next_node) newNode;
+
+     decltype(next_node) newNode={nullptr};
 
    //Node* newNode = new Node;
 
@@ -131,7 +135,9 @@ void List::push_beginning(int new_data, Node* newNode_)
 {
    //Node* newNode = new Node; // klasa abstrakcyjna, wiec nie mozemy utworzyc. za to moze do niego przyjsc czarny lub czerwony
 
-    decltype(newNode_) newNode;
+    //decltype(newNode_) newNode;
+
+     decltype(newNode_) newNode={nullptr};
 
    newNode->data = new_data;
    newNode->prev = nullptr;
@@ -151,7 +157,9 @@ void List::push_beginning(int new_data, Node* newNode_)
 void List::push_end(int new_data, Node* newNode_)
 {
 
-   decltype(newNode_) newNode;
+    decltype(newNode_) newNode={nullptr};
+
+  // decltype(newNode_) newNode;
    //Node* newNode = new Node;
 
    newNode->data = new_data;
