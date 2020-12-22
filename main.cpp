@@ -117,6 +117,8 @@ int main()
 
     tree.give_me_node(0)->testowa();
 
+    tree.insert_after(&red_branch, 7);
+
     tree.display();
 
     //Black_Node red_branch;

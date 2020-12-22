@@ -1,5 +1,7 @@
 #include "NodeVar.h"
 #include "Node.h"
+#include "Black_Node.h"
+#include "Red_Node.h"
 
 #include <typeinfo>
 
@@ -31,18 +33,24 @@ Node* List::give_me_node(int index)
     return temp;
 }
 
-  string List::give_me_type(Node* leaf)
-  {
-      string s = typeid(leaf).name();
-
-      return s;
-  }
 
 void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez rozroznienia
 {
-    string s = (give_me_type(prev_node));
+    //Node* newNode = new Node;
+    decltype(prev_node) newNode;
 
-   (give_me_type(prev_node))* newNode = new (give_me_type(prev_node)); // tego nie moze
+    cout << " typ argumentu przekazwanego do metody insert_after: " << typeid(newNode).name() << endl;
+
+    //auto* newNode = new auto(prev_node);
+
+
+    // (give_me_type(prev_node))* newNode = new (give_me_type(prev_node)); // tego nie moze
+
+   //if(typeid(prev_node)==typeid(Black_Node))
+    //   Node* newNode = new Black_Node;
+
+   // else
+     //  Red_Node* newNode = new Red_Node;
 
    newNode->data = new_data;
 
@@ -61,7 +69,9 @@ void List::insert_after(Node* prev_node, int new_data) // przyjdzie node bez roz
 
 void List::insert_before(Node* next_node, int new_data)
 {
-   Node* newNode = new Node;
+    decltype(next_node) newNode;
+
+   //Node* newNode = new Node;
 
    newNode->data = new_data;
 
@@ -117,9 +127,12 @@ int List::operator [](int index)
     return temp->data;
 }
 
-void List::push_beginning(int new_data, Node* newNode)
+void List::push_beginning(int new_data, Node* newNode_)
 {
    //Node* newNode = new Node; // klasa abstrakcyjna, wiec nie mozemy utworzyc. za to moze do niego przyjsc czarny lub czerwony
+
+    decltype(newNode_) newNode;
+
    newNode->data = new_data;
    newNode->prev = nullptr;
    newNode->next = head;
@@ -135,9 +148,11 @@ void List::push_beginning(int new_data, Node* newNode)
 
 }
 
-void List::push_end(int new_data)
+void List::push_end(int new_data, Node* newNode_)
 {
-   Node* newNode = new Node;
+
+   decltype(newNode_) newNode;
+   //Node* newNode = new Node;
 
    newNode->data = new_data;
    newNode->prev = tail;
@@ -310,9 +325,14 @@ void List::insert_at(int position, int value)
        cout << "Warning: position exceeds size of the list" << endl;
 
        return;
-    }
+    };
 
-    Node* newNode = new Node;
+    //void List::insert_before(Node* next_node, int new_data)
+
+     insert_before(give_me_node(position+1), value);
+
+
+   /* Node* newNode = new Node;
 
     newNode->data = value;
 
@@ -335,7 +355,7 @@ void List::insert_at(int position, int value)
    newNode->next = temp;
 
    count++;
-
+*/
 }
 
 void List::swap_value(int index1, int index2)

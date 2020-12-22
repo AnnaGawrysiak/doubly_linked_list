@@ -5,7 +5,7 @@ using namespace std;
 
 class List
 {
-private:
+public:
 
       Node* head;
 
@@ -24,17 +24,15 @@ public:
 
      Node* give_me_node(int index);
 
-     string give_me_type(Node* leaf);
-
     List();
 
     ~List();
 
     int operator [](int index);
 
-    void push_beginning(int new_data);
+    void push_beginning(int new_data, Node* newNode_);
 
-    void push_end (int new_data, Node* newNode);
+    void push_end (int new_data, Node* newNode_);
 
     void remove_from_position(int position);
 
