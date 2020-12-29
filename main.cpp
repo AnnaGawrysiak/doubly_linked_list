@@ -90,7 +90,7 @@ int main()
 
     tree.give_me_node(0)->testowa();
 
-    tree.insert_after(&red_branch, 7);
+    //tree.add_node(&red_branch, 7);
 
     tree.display();
 
@@ -250,4 +250,3 @@ bool test_remove_from_position()
     return false;
 }
 */
-

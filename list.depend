@@ -6,18 +6,19 @@
 1608141803 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\node.h
 	<iostream>
 
-1609248200 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\nodevar.h
+1609252441 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\nodevar.h
 	"Node.h"
 	"Black_Node.h"
 	"Red_Node.h"
 
-1608668535 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\nodevar.cpp
+1609252344 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\nodevar.cpp
 	"NodeVar.h"
 	"Node.h"
 	"Black_Node.h"
 	"Red_Node.h"
+	<typeinfo>
 
-1608670231 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\main.cpp
+1609252523 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\main.cpp
 	<iostream>
 	"NodeVar.h"
 	"Red_Node.h"

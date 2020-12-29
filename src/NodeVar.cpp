@@ -2,6 +2,7 @@
 #include "Node.h"
 #include "Black_Node.h"
 #include "Red_Node.h"
+#include <typeinfo>
 
 
 List::List()
@@ -32,22 +33,34 @@ Node* List::give_me_node(int index)
 }
 
 // stworz metode
-Node* give_me_type()
+/*Node* give_me_type(Node *newNode_)
 {
-    switch(which_class)
 
-    case List_heritage::Black_Node:
+    enum List_heritage
     {
-        Node* newNode = new Black_Node;
+        Black_Node,
+        Red_Node
+    };
+
+    switch(typeid(newNode_).name())
+    {
+         case List_heritage::Black_Node:
+            {
+                Node* newNode = new Black_Node;
+                return newNode;
+            }
+
+         case List_heritage::Red_Node:
+             {
+                Node* newNode = new Red_Node;
+                return newNode;
+             }
     }
 
-    case List_heritage::Red_Node:
-     {
-        Node* newNode = new Red_Node;
-    }
+return newNode;
 }
+*/
 
-/*
 void List::insert_after(Node* prev_node, int new_data)
 {
   decltype(prev_node) newNode={nullptr};
@@ -66,8 +79,8 @@ void List::insert_after(Node* prev_node, int new_data)
 
     count++;
 }
-*/
-/*
+
+
 void List::insert_before(Node* next_node, int new_data)
 {
      decltype(next_node) newNode={nullptr};
@@ -87,7 +100,7 @@ void List::insert_before(Node* next_node, int new_data)
 
    count++;
 }
-*/
+
 void List::n_remove (Node* Node_to_remove)
 {
     count--;
@@ -125,7 +138,7 @@ int List::operator [](int index)
 
     return temp->data;
 }
-/*
+
 void List::push_beginning(int new_data, Node* newNode_)
 {
      decltype(newNode_) newNode={nullptr};
@@ -144,25 +157,13 @@ void List::push_beginning(int new_data, Node* newNode_)
    count++;
 
 }
-*/
-void List::push_end(int new_data, List_heritage which_class)
+
+void List::push_end(int new_data, Node* newNode_)
 {
-    switch(which_class)
-
-    case List_heritage::Black_Node:
-    {
-        Node* newNode = new Black_Node;
-    }
-
-    case List_heritage::Red_Node:
-     {
-        Node* newNode = new Red_Node;
-    }
 
     //if (typeid(newNode).name == BlackNode)
 
-
-    //decltype(newNode_) newNode = {nullptr};
+   decltype(newNode_) newNode = {nullptr};
 
    newNode->data = new_data;
    newNode->prev = tail;
@@ -328,7 +329,7 @@ int List::find_min()
 
 }
 /*
-void List::insert_at(int position, int value)
+void List::insert_value_at(int position, int value)
 {
     if (position > size_())
     {

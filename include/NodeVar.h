@@ -7,7 +7,7 @@ using namespace std;
 
 class List
 {
-public:
+private:
 
       Node* head;
 
@@ -25,6 +25,8 @@ public:
 public:
 
      Node* give_me_node(int index);
+
+     Node* give_me_type(Node *newNode_);
 
     List();
 
@@ -50,7 +52,7 @@ public:
 
     int find_min();
 
-    void insert_at(int position, int value);
+    void insert_value_at(int position, int value);
 
     void swap_value(int index1, int index2);
 
@@ -62,9 +64,10 @@ public:
 
     void add_node(Node* newNode, int value);
 };
-
+/*
 enum List_heritage
 {
     Black_Node,
     Red_Node
 };
+*/
