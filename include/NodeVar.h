@@ -1,5 +1,7 @@
 #pragma once
 #include "Node.h"
+#include "Black_Node.h"
+#include "Red_Node.h"
 
 using namespace std;
 
@@ -59,4 +61,10 @@ public:
     void display();
 
     void add_node(Node* newNode, int value);
+};
+
+enum List_heritage
+{
+    Black_Node,
+    Red_Node
 };

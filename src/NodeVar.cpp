@@ -31,6 +31,22 @@ Node* List::give_me_node(int index)
     return temp;
 }
 
+// stworz metode
+Node* give_me_type()
+{
+    switch(which_class)
+
+    case List_heritage::Black_Node:
+    {
+        Node* newNode = new Black_Node;
+    }
+
+    case List_heritage::Red_Node:
+     {
+        Node* newNode = new Red_Node;
+    }
+}
+
 /*
 void List::insert_after(Node* prev_node, int new_data)
 {
@@ -129,9 +145,24 @@ void List::push_beginning(int new_data, Node* newNode_)
 
 }
 */
-void List::push_end(int new_data, Node* newNode_)
+void List::push_end(int new_data, List_heritage which_class)
 {
-    decltype(newNode_) newNode = {nullptr, nullptr};
+    switch(which_class)
+
+    case List_heritage::Black_Node:
+    {
+        Node* newNode = new Black_Node;
+    }
+
+    case List_heritage::Red_Node:
+     {
+        Node* newNode = new Red_Node;
+    }
+
+    //if (typeid(newNode).name == BlackNode)
+
+
+    //decltype(newNode_) newNode = {nullptr};
 
    newNode->data = new_data;
    newNode->prev = tail;

@@ -4,7 +4,7 @@
 class Black_Node : public Node
 {
     public:
-        Black_Node(const Node & a);
+        Black_Node();
         virtual ~Black_Node();
         void testowa()
         {
