@@ -1,5 +1,8 @@
 #pragma once
 #include "Node.h"
+#include <iostream>
+
+using namespace std;
 
 class Black_Node : public Node
 {

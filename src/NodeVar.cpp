@@ -2,8 +2,6 @@
 #include "Node.h"
 #include "Black_Node.h"
 #include "Red_Node.h"
-#include <typeinfo>
-
 
 List::List()
 {
@@ -31,34 +29,7 @@ Node* List::give_me_node(int index)
 
     return temp;
 }
-
-// stworz metode
-/*Node* give_me_type(Node *newNode_)
-{
-
-    enum List_heritage
-    {
-        Black_Node,
-        Red_Node
-    };
-
-    switch(typeid(newNode_).name())
-    {
-         case List_heritage::Black_Node:
-            {
-                Node* newNode = new Black_Node;
-                return newNode;
-            }
-
-         case List_heritage::Red_Node:
-             {
-                Node* newNode = new Red_Node;
-                return newNode;
-             }
-    }
-}
-*/
-template<class T>
+/*
 void List::insert_after(T* prev_node, int new_data)
 {
   T* newNode = new T;
@@ -78,7 +49,6 @@ void List::insert_after(T* prev_node, int new_data)
     count++;
 }
 
-template<class T>
 void List::insert_before(T* next_node, int new_data)
 {
    T* newNode = new T;
@@ -99,7 +69,6 @@ void List::insert_before(T* next_node, int new_data)
    count++;
 }
 
-template<class T>
 void List::n_remove (T* Node_to_remove)
 {
     count--;
@@ -124,7 +93,7 @@ void List::n_remove (T* Node_to_remove)
          delete Node_to_remove;
 
 }
-
+*/
 
 int List::operator [](int index)
 {
@@ -138,9 +107,9 @@ int List::operator [](int index)
     return temp->data;
 }
 
-void List::push_beginning(int new_data, Node* newNode_)
-{
-     decltype(newNode_) newNode={nullptr};
+/*void List::push_beginning(int new_data, T* newNode_)
+ {
+    T* newNode = new T;
 
    newNode->data = new_data;
    newNode->prev = nullptr;
@@ -156,10 +125,11 @@ void List::push_beginning(int new_data, Node* newNode_)
    count++;
 
 }
-
-void List::push_end(int new_data, Node* newNode_)
+*/
+/*
+void List::push_end(int new_data, T* newNode_)
 {
-   decltype(newNode_) newNode = {nullptr};
+   T* newNode = new T;
 
    newNode->data = new_data;
    newNode->prev = tail;
@@ -173,8 +143,8 @@ void List::push_end(int new_data, Node* newNode_)
    tail = newNode;
 
    count++;
-
 }
+*/
 
 void List::remove_from_position (int position)
 {
@@ -324,20 +294,8 @@ int List::find_min()
     return found_min;
 
 }
-/*
-void List::insert_value_at(int position, int value)
-{
-    if (position > size_())
-    {
-       cout << "Warning: position exceeds size of the list" << endl;
 
-       return;
-    };
 
-     insert_before(give_me_node(position+1), value);
-
-}
-*/
 void List::swap_value(int index1, int index2)
 {
     int temp = 0;
@@ -475,9 +433,8 @@ void List::display()
     };
 
 }
-
-
-void List::add_node(Node* newNode, int value)
+/*
+void List::add_node(T* newNode, int value)
 {
 
    newNode->data = value;
@@ -493,4 +450,4 @@ void List::add_node(Node* newNode, int value)
 
    count++;
 }
-
+*/

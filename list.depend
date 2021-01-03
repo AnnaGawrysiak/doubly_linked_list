@@ -1,24 +1,23 @@
 # depslib dependency file v1.0
-1609249551 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\node.cpp
+1609685865 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\node.cpp
 	"NodeVar.h"
 	"Node.h"
 
-1608141803 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\node.h
+1609694587 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\node.h
+
+1609709684 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\nodevar.h
+	"Node.h"
+	"Black_Node.h"
+	"Red_Node.h"
 	<iostream>
 
-1609681488 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\nodevar.h
-	"Node.h"
-	"Black_Node.h"
-	"Red_Node.h"
-
-1609682830 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\nodevar.cpp
+1609685040 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\nodevar.cpp
 	"NodeVar.h"
 	"Node.h"
 	"Black_Node.h"
 	"Red_Node.h"
-	<typeinfo>
 
-1609252614 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\main.cpp
+1609710676 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\main.cpp
 	<iostream>
 	"NodeVar.h"
 	"Red_Node.h"
@@ -27,12 +26,14 @@
 1609249551 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\black_node.cpp
 	"Black_Node.h"
 
-1609249299 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\black_node.h
+1609694613 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\black_node.h
 	"Node.h"
+	<iostream>
 
 1609249575 source:c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\src\red_node.cpp
 	"Red_Node.h"
 
-1608141803 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\red_node.h
+1609694638 c:\users\ania\onedrive\pulpit\programowanie\programowanie_lekcje\lekcja_22\books_ratings\list\include\red_node.h
 	"Node.h"
+	<iostream>
 
