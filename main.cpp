@@ -35,47 +35,6 @@ bool test_remove_from_position();
 
 int main()
 {
-/*
-   List myNodeVar;
-   myNodeVar.push_beginning(20);
-   myNodeVar.push_beginning(22);
-   myNodeVar.push_beginning(23);
-   myNodeVar.push_beginning(25);
-   myNodeVar.push_beginning(26);
-   myNodeVar.push_beginning(21);
-    cout << "test_push_beginning: " << (test_push_beginning() ? " Success! " : " Failure") << endl;
-    myNodeVar.push_end(40);
-    myNodeVar.push_end(43);
-    myNodeVar.push_end(4);
-    myNodeVar.push_end(49);
-    cout << "test_push_end: " << (test_push_end() ? " Success! " : " Failure") << endl;
-    myNodeVar.n_pop_front();
-    cout << "test_n_pop_front: " << (test_n_pop_front() ? " Success! " : " Failure") << endl;
-     myNodeVar.n_pop_back();
-    cout << "test_n_pop_back: " << (test_n_pop_back() ? " Success! " : " Failure") << endl;
-    myNodeVar.reverseList();
-     cout << "test_reverse_list: " << (test_reverseList() ? " Success! " : " Failure") << endl;
-     int searched_value = 25;
-    if (myNodeVar.linear_search(searched_value) != nullptr)
-        cout << "Value " << searched_value << " has been found at position: " << myNodeVar.linear_search(searched_value) << endl;
-    else
-        cout << "Searched value has not been found. " << endl;
-     cout << "test_linear_search: " << (test_linear_search() ? " Success! " : " Failure") << endl;
-      myNodeVar.bubble_sort();
-    cout << "test_bubble_sort: " << (test_bubble_sort() ? " Success! " : " Failure") << endl;
-    myNodeVar.bubble_sort();
-    cout << "Minimum value is: " << myNodeVar.find_min() << endl;
-    cout << "test_find_min: " << (test_find_min() ? " Success! " : " Failure") << endl;
-     myNodeVar.insert_at(3, 12);
-     cout << "test_insert_at: " << (test_insert_at() ? " Success! " : " Failure") << endl;
-    cout << "test_swap_value: " << (test_swap_value() ? " Success! " : " Failure") << endl;
-     cout << "test_swap_: " << (test_swap_() ? " Success! " : " Failure") << endl;
-     myNodeVar.swap_(1, 2);
-    cout << "test_size_: " << (test_size_() ? " Success! " : " Failure") << endl;
-    cout << "test_remove_from_position: " << (test_remove_from_position() ? " Success! " : " Failure") << endl;
-    myNodeVar.display();
-*/ // zrobilysmy klase abstrakcyjna z node. nie moze miec wywolan
-
     List tree;
 
     Red_Node red_branch;
@@ -90,7 +49,7 @@ int main()
 
     tree.give_me_node(0)->testowa();
 
-    //tree.add_node(&red_branch, 7);
+    tree.add_node(&red_branch, 7);
 
     tree.display();
 

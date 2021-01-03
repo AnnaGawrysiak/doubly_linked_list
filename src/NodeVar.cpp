@@ -56,14 +56,12 @@ Node* List::give_me_node(int index)
                 return newNode;
              }
     }
-
-return newNode;
 }
 */
-
-void List::insert_after(Node* prev_node, int new_data)
+template<class T>
+void List::insert_after(T* prev_node, int new_data)
 {
-  decltype(prev_node) newNode={nullptr};
+  T* newNode = new T;
 
    newNode->data = new_data;
 
@@ -80,10 +78,10 @@ void List::insert_after(Node* prev_node, int new_data)
     count++;
 }
 
-
-void List::insert_before(Node* next_node, int new_data)
+template<class T>
+void List::insert_before(T* next_node, int new_data)
 {
-     decltype(next_node) newNode={nullptr};
+   T* newNode = new T;
 
    newNode->data = new_data;
 
@@ -101,7 +99,8 @@ void List::insert_before(Node* next_node, int new_data)
    count++;
 }
 
-void List::n_remove (Node* Node_to_remove)
+template<class T>
+void List::n_remove (T* Node_to_remove)
 {
     count--;
 
@@ -160,9 +159,6 @@ void List::push_beginning(int new_data, Node* newNode_)
 
 void List::push_end(int new_data, Node* newNode_)
 {
-
-    //if (typeid(newNode).name == BlackNode)
-
    decltype(newNode_) newNode = {nullptr};
 
    newNode->data = new_data;

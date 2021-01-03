@@ -16,17 +16,18 @@ private:
       unsigned count;
 
 
-    void insert_after(Node* prev_node, int new_data);
+    template<class T>
+    void insert_after(T* prev_node, int new_data);
 
-    void insert_before(Node* next_node, int new_data);
+    template<class T>
+    void insert_before(T* next_node, int new_data);
 
-    void n_remove (Node* Node_to_remove);
+    template<class T>
+    void n_remove (T* Node_to_remove);
 
 public:
 
      Node* give_me_node(int index);
-
-     Node* give_me_type(Node *newNode_);
 
     List();
 
