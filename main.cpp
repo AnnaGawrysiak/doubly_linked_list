@@ -1,7 +1,5 @@
 #include <iostream>
 #include "NodeVar.h"
-#include "Red_Node.h"
-#include "Black_Node.h"
 
 using namespace std;
 

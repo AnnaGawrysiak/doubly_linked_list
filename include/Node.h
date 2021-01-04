@@ -2,8 +2,7 @@
 
 using namespace std;
 
-// A doubly linked list node
-class Node // element listy dwukierunkowej
+class Node
 {
     public:
         int data;
@@ -13,9 +12,8 @@ class Node // element listy dwukierunkowej
         Node (const Node& a);
         virtual ~Node();
         Node& operator=(const Node& r);
-        virtual void testowa() = 0; // metoda czysto wirtualna
+        virtual void testowa() = 0;
 
-    //private:
 };
 
 

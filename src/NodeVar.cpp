@@ -29,71 +29,6 @@ Node* List::give_me_node(int index)
 
     return temp;
 }
-/*
-void List::insert_after(T* prev_node, int new_data)
-{
-  T* newNode = new T;
-
-   newNode->data = new_data;
-
-   newNode->next = prev_node->next;
-
-   prev_node->next = newNode;
-
-   newNode->prev = prev_node;
-
-   if (newNode->next != nullptr)
-   newNode->next->prev = newNode;
-   else tail = newNode;
-
-    count++;
-}
-
-void List::insert_before(T* next_node, int new_data)
-{
-   T* newNode = new T;
-
-   newNode->data = new_data;
-
-   next_node->prev = newNode;
-
-   newNode->next = next_node;
-
-   if (newNode->prev != nullptr)
-   {
-       newNode->prev = next_node->prev->prev;
-       newNode->prev->next = newNode;
-   }
-   else head = newNode;
-
-   count++;
-}
-
-void List::n_remove (T* Node_to_remove)
-{
-    count--;
-
-    if (Node_to_remove->prev != nullptr)
-        Node_to_remove->prev->next = Node_to_remove->next;
-    else
-        {
-        head = Node_to_remove->next;
-        delete Node_to_remove;
-        return;
-        }
-
-
-    if (Node_to_remove->next != nullptr)
-        Node_to_remove->next->prev = Node_to_remove->prev;
-    else
-        tail = Node_to_remove->prev;
-
-        cout << "Node to remove: " << Node_to_remove->data << endl;
-
-         delete Node_to_remove;
-
-}
-*/
 
 int List::operator [](int index)
 {
@@ -107,44 +42,6 @@ int List::operator [](int index)
     return temp->data;
 }
 
-/*void List::push_beginning(int new_data, T* newNode_)
- {
-    T* newNode = new T;
-
-   newNode->data = new_data;
-   newNode->prev = nullptr;
-   newNode->next = head;
-
-   if(head != nullptr)
-   head->prev = newNode;
-
-   else tail = newNode;
-
-   head = newNode;
-
-   count++;
-
-}
-*/
-/*
-void List::push_end(int new_data, T* newNode_)
-{
-   T* newNode = new T;
-
-   newNode->data = new_data;
-   newNode->prev = tail;
-   newNode->next = nullptr;
-
-   if(tail != nullptr)
-   tail->next = newNode;
-   else
-   head = newNode;
-
-   tail = newNode;
-
-   count++;
-}
-*/
 
 void List::remove_from_position (int position)
 {
@@ -305,7 +202,6 @@ void List::swap_value(int index1, int index2)
    give_me_node(index2)->data = temp;
 }
 
-
 void List::swap_(int index1, int index2)
 {
     if (count == 0 || count ==1)
@@ -313,6 +209,7 @@ void List::swap_(int index1, int index2)
 
     if (index1 == index2)
         return;
+
 
 
     Node* A = give_me_node(index1);
@@ -433,21 +330,4 @@ void List::display()
     };
 
 }
-/*
-void List::add_node(T* newNode, int value)
-{
 
-   newNode->data = value;
-   newNode->prev = nullptr;
-   newNode->next = head;
-
-   if(head != nullptr)
-   head->prev = newNode;
-
-   else tail = newNode;
-
-   head = newNode;
-
-   count++;
-}
-*/
